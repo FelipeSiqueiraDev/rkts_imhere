@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
   },
   eventName: {
     color: "#FFF",
-    forSize: 24,
+    fontSize: 24,
     fontWeight: "bold",
     marginTop: 48,
   },
@@ -44,4 +44,9 @@ export const styles = StyleSheet.create({
     color: "#FFF",
     fontSize: 24,
   },
+  listEmptyText: {
+    color: "#FFF",
+    fontSize: 14,
+    textAlign: "center",
+  }
 });
