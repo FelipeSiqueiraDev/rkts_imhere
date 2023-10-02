@@ -28,15 +28,21 @@ export function Home() {
 
   function handleParticipantRemove(name: string) {
     return Alert.alert("Remover", `Deseja remover o participante ${name}?`, [
-      { text: "Sim", onPress: () => Alert.alert("Participante removido") },
+      {
+        text: "Sim",
+        onPress: () =>
+          setParticipants((prevState) =>
+            prevState.filter((participant) => participant !== name)
+          ),
+      },
       { text: "Não", style: "cancel" },
     ]);
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.eventName}>Nome do Evento</Text>
-      <Text style={styles.eventDate}>Sexta, 4 de Novembro de 2023</Text>
+      <Text style={styles.eventName}>Meu super evento incrível!</Text>
+      <Text style={styles.eventDate}>Segunda, 2 de Outubro de 2023</Text>
 
       <View style={styles.form}>
         <TextInput
